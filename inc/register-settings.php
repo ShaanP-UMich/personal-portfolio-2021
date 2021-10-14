@@ -1,7 +1,12 @@
 <?php
 
 function register_primary_menu() {
-  register_nav_menu( 'primary', 'Primary Menu' );
+  register_nav_menus(
+    array(
+      'top_nav' => __( 'Top Nav Menu' ),
+      'bottom_nav' => __( 'Bottom Nav Menu' )
+    )
+  );
 }
 add_action( 'after_setup_theme', 'register_primary_menu' );
 
