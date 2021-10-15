@@ -9,7 +9,7 @@ get_header();
     <br>
     <br>
     <br>
-    <h1>This is the Portfolio page</h1>
+    <h1 class="animate__animated animate__jello">This is the Portfolio page</h1>
 </div>
 
 <?php get_footer(); ?>

@@ -2,7 +2,15 @@
   get_header();
   require get_template_directory() . '/inc/section_vars.php';
 ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1>The Front Page</h1>
+
+<h1 class="animate__animated animate__jello">This is the Home page</h1>
 
 <?php if (get_theme_mod($home_top_img)) { ?>
   <img 
