@@ -4,6 +4,17 @@ get_header();
 
 <h1>Add your message here</h1>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <form class="message-form" method="post">
   <input id="message-title" type="text">
   <button type="submit">Save!</button>
