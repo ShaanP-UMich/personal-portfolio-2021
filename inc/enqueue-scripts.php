@@ -58,5 +58,8 @@ function add_styles()
   wp_enqueue_style("home", get_theme_file_uri('/css/home.css'));
   wp_enqueue_style("header", get_theme_file_uri('/css/header.css'));
   wp_enqueue_style("animate", 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+  wp_enqueue_style("comfortaa_font", '//fonts.googleapis.com/css?family=Comfortaa');
+  wp_enqueue_style("montserrat_font", 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+  wp_enqueue_style("noto_sans_font", 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 }
 add_action('wp_enqueue_scripts', 'add_styles');
