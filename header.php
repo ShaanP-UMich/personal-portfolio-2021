@@ -20,7 +20,7 @@ require get_template_directory() . '/inc/section_vars.php';
                     <img src="<?php echo get_theme_mod($navbar_icon) ?>" class="logo-image" alt="">
                 <?php } ?>
                 <!-- <img src="images/Invent Animate Icon_100x100.jpg" class="logo-image"> -->
-                <?php if (get_theme_mod($home_top_desc)) { ?>
+                <?php if (get_theme_mod($navbar_name)) { ?>
                     <p class="logo-text">
                         <?php echo get_theme_mod($navbar_name) ?>
                     </p>
