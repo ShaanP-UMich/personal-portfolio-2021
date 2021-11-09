@@ -1,8 +1,10 @@
 <?php
+  $navbar_section = 'navbar_section';
+  $navbar_icon = 'navbar_icon';
+  $navbar_name = 'navbar_name';
+
   $home_section = 'home_section';
-  $home_top_vid = 'top_vid';
-  $home_top_img = 'home_top_img';
-  $home_top_desc = 'home_top_desc';
-  $example_section = 'example_section';
-  $example_repeater = 'example_repeater';
+  $home_greeting = 'home_greeting';
+  $home_hero = 'home_hero';
+  $home_myself = 'home_myself'
 ?>
