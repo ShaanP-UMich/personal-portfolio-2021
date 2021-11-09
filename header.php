@@ -15,7 +15,7 @@ require get_template_directory() . '/inc/section_vars.php';
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="https://github.com/ShaanP-UMich/VOID-Portfolio" class="logo">
+            <a href="<?php echo home_url(); ?>" class="logo">
                 <?php if (get_theme_mod($navbar_icon)) { ?>
                     <img src="<?php echo get_theme_mod($navbar_icon) ?>" class="logo-image" alt="">
                 <?php } ?>
@@ -27,17 +27,6 @@ require get_template_directory() . '/inc/section_vars.php';
                 <?php } ?>
                 <!-- <p class="logo-text">Shaan Parikh</p> -->
             </a>
-
-            <div class="mobile-box">
-                <a href="<?php echo home_url(); ?>">
-                    <div class="nav-logo"></div>
-                </a>
-                <div class="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
 
             <?php
             wp_nav_menu($args = array(

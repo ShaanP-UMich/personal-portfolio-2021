@@ -180,5 +180,23 @@ if ( ! function_exists( 'get_example_data' ) ) {
 	}
 }
 
+if (!function_exists('get_projects_data')) {
+	/**
+	 * Get Projects Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_projects_data($section) {
+		return template_data($section, array(
+			'title' => '',
+			'description' => '',
+			'skills' => '',
+			'img' => ''
+		));
+	}
+}
+
 
 ?>

@@ -168,5 +168,69 @@ function home_customizer($wp_customize)
       'section' => $home_section
     )
   ));
+
+  $wp_customize->add_setting($home_bio);
+  $wp_customize->add_control($home_bio, array(
+    'label' => 'Bio',
+    'section' => $home_section,
+    'type' => 'textarea'
+  ));
 }
 add_action('customize_register', 'home_customizer');
+
+// Projects page customizer
+function projects_repeatable_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($projects_section, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Projects',
+  ));
+
+  $wp_customize->add_setting(
+    $projects_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $projects_repeater,
+      array(
+        'label'     => esc_html__('Update List of Projects'),
+        'description'   => 'Add or remove projects from the projects page and add a title and description.',
+        'section'       => $projects_section,
+        'live_title_id' => 'title',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 20, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'title'  => array(
+            'title' => esc_html__('Project Title'),
+            'type'  => 'text',
+          ),
+          'description'  => array(
+            'title' => esc_html__('Project Description'),
+            'type'  => 'text',
+          ),
+          'skills'  => array(
+            'title' => esc_html__('Project Skills'),
+            'type'  => 'text',
+          ),
+          'img'  => array(
+            'title' => esc_html__('Project Img'),
+            'type'  => 'media',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'projects_repeatable_customizer');
