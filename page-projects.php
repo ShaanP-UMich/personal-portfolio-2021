@@ -29,21 +29,21 @@ require get_template_directory() . '/inc/section_vars.php';
 
                             <div class="projects-section-col">
                                 <?php
-                                $media = '<img src="' . esc_url(get_media_url($f['img'])) . '" class="project-image"';
+                                $media = '<img src="' . esc_url(get_media_url($f['img'])) . '" class="project-image">';
                                 ?>
                                 <?php echo $media ?>
                             </div>
                         </div>
 
                     <?php } else { ?>
-                        <div class="projects-section-col flipped">
-                            <?php
-                            $media = '<img src="' . esc_url(get_media_url($f['img'])) . '" class="project-image"';
-                            ?>
-                            <?php echo $media ?>
-                        </div>
-
                         <div class="projects-section-row">
+                            <div class="projects-section-col flipped">
+                                <?php
+                                $media = '<img src="' . esc_url(get_media_url($f['img'])) . '" class="project-image">';
+                                ?>
+                                <?php echo $media ?>
+                            </div>
+
                             <div class="projects-section-col">
                                 <p class="project-text project-name-text"><?php echo $f['title'] ?></p>
                                 <p class="project-text project-desc-text"><?php echo $f['description'] ?></p>
