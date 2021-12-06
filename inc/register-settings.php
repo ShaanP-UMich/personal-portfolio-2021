@@ -234,3 +234,42 @@ function projects_repeatable_customizer($wp_customize)
   );
 }
 add_action('customize_register', 'projects_repeatable_customizer');
+
+function footer_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  $wp_customize->add_section($footer_section, array(
+    'title' => 'Footer',
+  ));
+
+  $wp_customize->add_setting($footer_icon1);
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $footer_icon1,
+    array(
+      'label' => 'Footer Icon 1',
+      'section' => $footer_section
+    )
+  ));
+
+  $wp_customize->add_setting($footer_icon2);
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $footer_icon2,
+    array(
+      'label' => 'Footer Icon 2',
+      'section' => $footer_section
+    )
+  ));
+
+  $wp_customize->add_setting($footer_icon3);
+  $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    $footer_icon3,
+    array(
+      'label' => 'Footer Icon 3',
+      'section' => $footer_section
+    )
+  ));
+}
+add_action('customize_register', 'footer_customizer');

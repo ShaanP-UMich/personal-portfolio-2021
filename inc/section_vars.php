@@ -15,4 +15,9 @@
   $projects_desc = 'projects_desc';
   $projects_skills = 'projects_skills';
   $projects_img = 'projects_img';
+
+  $footer_section = 'footer_section';
+  $footer_icon1 = 'footer_icon1';
+  $footer_icon2 = 'footer_icon2';
+  $footer_icon3 = 'footer_icon3';
 ?>

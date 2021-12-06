@@ -10,14 +10,23 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 
     <div class="footer-images">
-        <a href="">
-            <img src="images/footer icons/facebook.png" class="footer-image">
+        <a href="mailto: shaanp@umich.edu">
+            <?php if (get_theme_mod($footer_icon1)) { ?>
+                <img src="<?php echo get_theme_mod($footer_icon1) ?>" class="footer-image" alt="">
+            <?php } ?>
+            <!-- <img src="images/footer icons/facebook.png" class="footer-image"> -->
         </a>
-        <a href="">
-            <img src="images/footer icons/email.png" class="footer-image">
+        <a href="https://www.facebook.com">
+            <?php if (get_theme_mod($footer_icon2)) { ?>
+                <img src="<?php echo get_theme_mod($footer_icon2) ?>" class="footer-image" alt="">
+            <?php } ?>
+            <!-- <img src="images/footer icons/email.png" class="footer-image"> -->
         </a>
-        <a href="">
-            <img src="images/footer icons/spotify.png" class="footer-image">
+        <a href="https://open.spotify.com/user/pieface3450?si=66e2b18e9ea24ff9">
+            <?php if (get_theme_mod($footer_icon3)) { ?>
+                <img src="<?php echo get_theme_mod($footer_icon3) ?>" class="footer-image" alt="">
+            <?php } ?>
+            <!-- <img src="images/footer icons/spotify.png" class="footer-image"> -->
         </a>
     </div>
 </div>
